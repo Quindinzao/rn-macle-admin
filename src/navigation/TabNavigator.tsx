@@ -6,9 +6,11 @@ import { useRoute } from '@react-navigation/native';
 // Screens
 import HomeScreen from '../screens/HomeScreen';
 import AddScreen from '../screens/AddScreen';
+import OrderScreen from '../screens/OrderScreen';
 
 const HomeRoute = () => <HomeScreen />;
 const AddRoute = () => <AddScreen />;
+const OrderRoute = () => <OrderScreen />;
 
 const TabNavigator: React.FC = () => {
   const routeItem = useRoute();
@@ -18,6 +20,8 @@ const TabNavigator: React.FC = () => {
     switch (initialTab) {
       case 'add':
         return 1;
+      case 'order':
+        return 2;
       case 'home':
       default:
         return 0;
@@ -27,11 +31,13 @@ const TabNavigator: React.FC = () => {
   const [routes] = useState([
     { key: 'home', title: 'Início', icon: 'home' },
     { key: 'add', title: 'Adicionar', icon: 'plus-box' },
+    { key: 'order', title: 'Pedidos', icon: 'plus-box' },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     add: AddRoute,
+    order: OrderRoute
   });
 
   return (

@@ -1,4 +1,4 @@
 export type RoutesProps = {
   LoginRegister: undefined;
-  Tabs: { initialTab?: 'home' | 'add'};
+  Tabs: { initialTab?: 'home' | 'add' | 'order'};
 };
