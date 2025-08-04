@@ -15,3 +15,7 @@ npm install
 # Depois:
 npx expo start
 ```
+
+# Dúvidas? 🤓☝️
+
+Não hesite em enviar uma mensagem para o endereço eletrônico [GMail - João Victor Fernandes](maitto:j.v.fernandes.contact@gmail.com)
