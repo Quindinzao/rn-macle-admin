@@ -24,12 +24,15 @@ export const useProductsRequest = () => {
       });
     },
     productCreate: async ({name, image, price, description} : ProductProps) => {
-      return await api.post(`/products`, {
+      return await api.post('/products', {
         name,
         image,
         price,
         description
       });
     },
+    productDelete: async (id: number) => {
+      return await api.delete(`/products/product/${id}`)
+    }
   };
 };

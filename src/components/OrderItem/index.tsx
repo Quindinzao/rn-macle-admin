@@ -1,14 +1,7 @@
 import { View } from 'react-native';
 import { Text, TouchableRipple, Button } from 'react-native-paper';
 import { styles } from './styles';
-
-interface OrderDetailModalProps {
-  orderId: number;
-  orderStatus: string;
-  orderRequestDate: string;
-  orderUpdateDate: string;
-  onUpdateStatus: (orderId: number, status: string) => void;
-}
+import { OrderDetailModalProps } from '../../interfaces/OrderProps';
 
 const OrderItem: React.FC<OrderDetailModalProps> = ({
   orderId,

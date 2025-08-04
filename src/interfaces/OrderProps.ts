@@ -5,3 +5,7 @@ export interface OrderDetailProps {
   orderRequestDate: string;
   orderUpdateDate: string;
 }
+
+export interface OrderDetailModalProps extends OrderDetailProps {
+  onUpdateStatus: (orderId: number, status: string) => void;
+}

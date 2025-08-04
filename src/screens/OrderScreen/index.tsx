@@ -1,5 +1,5 @@
 // External libraries
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FlatList, View } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 
@@ -22,7 +22,6 @@ const OrderScreen = () => {
     setLoading(true);
     try {
       const response = await orderAll();
-      console.log({response})
       setOrders(response.data);
     } catch (error) {
       console.error({error});
